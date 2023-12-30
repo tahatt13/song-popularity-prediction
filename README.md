@@ -79,7 +79,7 @@ Les sons "Ooh" et "aah" sont considérés comme instrumentaux dans ce contexte. 
 
 1-  Scrapping des titres des musiques et leurs artistes entre 2010 et 2023 du site web : https://www.songfacts.com/browse/years/
 
-En utilisant l'API spotify on effectue ce qui suit : 
+Ensuite en utilisant l'API spotify on effectue ce qui suit : 
 
 2-  Récupération de l'identifiant des musiques .
 
@@ -90,16 +90,19 @@ En utilisant l'API spotify on effectue ce qui suit :
 
 1- Nettoyage de la base de données
 
-2- Analyse exploratoire des données
-
-3- Choix des variables
+2- Analyse exploratoire des données &choix des variables
 ## III- Modélisation 
 
-1- Régression Linéaire
+1- Pré-traitement des données
 
-2- Régression de Ridge
+2- Utilisation des différents modèles de régression: 
+    - Régression Linéaire
 
-3- Régression Random Forest 
+    - Régression de Ridge
 
-4- Régression Gradient Boosting
+    - Régression Random Forest 
+
+    - Régression Gradient Boosting
 ## Solution 
+
+Afin d'améliorer les résultats obtenus dans la dernière partie nous décidons d'augmenter la base de données en utilisant la base de données du projet : https://github.com/DorAzaria/Spotify-Machine-Learning-Project. Cette base de données contient 169k musiques avec leurs features respectives. 
