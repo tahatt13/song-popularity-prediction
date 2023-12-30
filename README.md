@@ -27,50 +27,46 @@ Valeurs prises :entiers entre -1 - 11.
 
 Valeurs prises : 0 ou 1.
 
-3-  **Time_signature (Signature temporelle) :**
-   - C'est une estimation de la signature temporelle. La signature temporelle est une convention de notation qui permet de spécifier le nombre de beats dans chaque période (ou mesure).
-Valeurs prises entières entre 3 - 7
-
-4- **acousticness (Acousticité) :**
+3- **acousticness (Acousticité) :**
    - Une mesure de 0.0 à 1.0 indiquant si la musique est acoustique. 1.0 représente une forte probabilité que la piste soit acoustique.
 
-5- **danceability (Dansabilité) :**
+4- **danceability (Dansabilité) :**
    - La dansabilité décrit à quel point une musique est adaptée à la danse en fonction d'une combinaison d'éléments musicaux tels que le tempo, la stabilité du rythme, la force du battement, et la régularité globale. Une valeur de 0.0 est la moins dansable et 1.0 est la plus dansable.
    Varibale float entre 0 et 1
 
-6- **energy (Énergie) :**
+5- **energy (Énergie) :**
    - Une mesure de 0.0 à 1.0 représentant une mesure perceptive de l'intensité et de l'activité. En général, les musiques énergiques semblent rapides, fortes et bruyantes.
    Varibale float entre 0 et 1
 
 
-7- **instrumentalness (Instrumentalité) :**
+6- **instrumentalness (Instrumentalité) :**
    - Détermine si une musique ne contient pas de voix.
 Les sons "Ooh" et "aah" sont considérés comme instrumentaux dans ce contexte. Les morceaux de rap ou de musique parlée sont clairement "vocaux". Plus la valeur de l'instrumentalité est proche de 1,0, plus il est probable que la piste ne contienne pas de contenu vocal. Les valeurs supérieures à 0,5 sont censées représenter des titres instrumentaux, mais la confiance est d'autant plus grande que la valeur s'approche de 1,0.
    Varibale float entre 0 et 1
 
 
-8- **loudness (Loudness) :**
+7- **loudness (Loudness) :**
    - Le volume global d'une musique en décibels (dB). Les valeurs de loudness sont moyennées sur l'ensemble de la musique et sont utiles pour comparer le volume relatif des musiques.
    Les valeurs se situent entre -60 et 0 db.
 
-9- **speechiness (Parlantéité) :**
+8- **speechiness (Parlantéité) :**
     - Détecte la présence de paroles parlées dans une piste. Plus la valeur de speechiness est proche de 1.0, plus l'enregistrement ressemble exclusivement à des paroles parlées.
        Varibale float entre 0 et 1
 
-10- **liveness (Vivacité) :**
+9- **liveness (Vivacité) :**
     - Détecte la présence d'un public dans l'enregistrement. Des valeurs de "liveness" plus élevées représentent une probabilité plus grande que la chanson ait été jouée en direct.
        Varibale float entre 0 et 1
 
 
-11- **Valence (Valence audio) :**
+10- **Valence (Valence audio) :**
     - Une mesure de 0.0 à 1.0 décrivant la positivité musicale transmise par une musique. Les musiques avec une valence élevée sonnent plus positives, tandis que celles avec une valence basse sonnent plus négatives.
        Varibale float entre 0 et 1
 
-12- **Tempo (Tempo) :**
+11- **Tempo (Tempo) :**
     - Le tempo estimé global d'une musique en battements par minute (BPM). En terminologie musicale, le tempo est la vitesse ou le rythme d'une pièce donnée et découle directement de la durée moyenne d'un battement.
        Varibale float positive
 
-13- **Popularity (Popularité de la chanson) :**
+12- **Popularity (Popularité de la chanson) :**
     - La popularité d'une chanson. C'est une valeur entre 0 et 100 avec 100 étant la plus populaire.
 
 
@@ -81,16 +77,15 @@ Les sons "Ooh" et "aah" sont considérés comme instrumentaux dans ce contexte. 
 
 Ensuite en utilisant l'API spotify on effectue ce qui suit : 
 
-2-  Récupération de l'identifiant des musiques .
+2-  Récupération de l'identifiant des musiques ainsi que leurs popularité.
 
 3-  Récupération des caractéristiques audios des musiques à partir de leur identifiant.
 
-4-  Récupération de la popularité de chaque musique.
 ## II - Prise en main de la base de données
 
 1- Nettoyage de la base de données
 
-2- Analyse exploratoire des données &choix des variables
+2- Analyse exploratoire des données & choix des variables
 ## III- Modélisation 
 
 1- Pré-traitement des données
@@ -103,6 +98,6 @@ Ensuite en utilisant l'API spotify on effectue ce qui suit :
     - Régression Random Forest 
 
     - Régression Gradient Boosting
-## Solution 
+## IV- Solution 
 
-Afin d'améliorer les résultats obtenus dans la dernière partie nous décidons d'augmenter la base de données en utilisant la base de données du projet : https://github.com/DorAzaria/Spotify-Machine-Learning-Project. Cette base de données contient 169k musiques avec leurs features respectives. 
+Afin d'améliorer les résultats obtenus dans la dernière partie nous décidons dans un premier temps de transformer le problème de régression en un problème de classification puis dans un second temps d'augmenter la base de données en utilisant la base de données du projet : https://github.com/DorAzaria/Spotify-Machine-Learning-Project. Cette base de données contient 169k musiques avec leurs features respectives. 
